@@ -19,14 +19,17 @@ class onlineBanking {
         }
     }
     public int withdrawMoney(int money) {
-        return accountBalance = accountBalance - money;
+        if (accountBalance>money)
+            accountBalance = accountBalance - money;
+        return  accountBalance;
     }
     public int deposit(int money) {
         return accountBalance = accountBalance + money;
     }
     public int transfer(int money) {
-        return  accountBalance = accountBalance - money;
-
+        if (accountBalance>money)
+            accountBalance = accountBalance - money;
+        return accountBalance;
     }
 
     public static void main(String[] args) {
